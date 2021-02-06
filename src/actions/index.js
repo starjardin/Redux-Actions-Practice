@@ -6,8 +6,13 @@ export function setSpecialText(text){
   }
 }
 
-export function increase(text){
+export function increase(){
   return {
     type: "INCREASE",
+  }
+}
+export function decrease(){
+  return {
+    type: "DECREASE",
   }
 }
