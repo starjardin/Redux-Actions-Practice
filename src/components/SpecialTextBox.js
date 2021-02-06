@@ -1,17 +1,23 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField'
+import { connect } from 'react-redux'
+import { setSpecialText } from '../actions'
 
-function SpecialTextBox({ set }) {
+function SpecialTextBox({ setSpecialText }) {
   return (
       <div>
         <div>Enter Special Text:</div>
         <TextField onChange={(e)=>{
-            if(set){
-              set(e.target.value);
+            if(setSpecialText){
+              setSpecialText(e.target.value);
             }
         }} />
       </div>
   );
 }
 
-export default (SpecialTextBox);
+export default connect(
+  null,{
+    setSpecialText
+  }
+)(SpecialTextBox);

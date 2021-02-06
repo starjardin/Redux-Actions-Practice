@@ -8,11 +8,11 @@ export function setSpecialText(text){
 
 export function increase(){
   return {
-    type: "INCREASE",
+    type: "INCREASE_COUNTER",
   }
 }
 export function decrease(){
   return {
-    type: "DECREASE",
+    type: "DECREASE_COUNTER",
   }
 }

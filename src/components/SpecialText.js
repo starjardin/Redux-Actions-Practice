@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from "react-redux"
 
 function SpecialText({ text }) {
   return (
@@ -7,4 +8,8 @@ function SpecialText({ text }) {
       </div>
   );
 }
-export default SpecialText;
+export default connect(
+  (state) => ({
+    text: state.specialText.specialText
+  }), null
+)(SpecialText);

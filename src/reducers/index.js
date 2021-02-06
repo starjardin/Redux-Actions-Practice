@@ -4,9 +4,9 @@ import globalState from '../state'
 // incomplete reducer function that checks an action prop type to detemine a counter number
 function currentCount(state= globalState.currentCount, action){
   switch(action.type) {
-    case "INCREASE":
+    case "INCREASE_COUNTER":
       return state + 1
-    case "DECREASE":
+    case "DECREASE_COUNTER":
       return state - 1
     default : return state
   }
@@ -46,8 +46,15 @@ function searchText(state=""){
 }
 
 // complete reducer function that should check action prop type ""SET_SPECIAL_TEXT" to determine state value
-function specialText(state=""){
-  return state;
+export function specialText(state = globalState.specialText, action) {
+  switch(action.type) {
+    case "SET_SPECIAL_TEXT":
+      return {
+        ...state,
+        specialText: action.value
+      }
+    default: return state
+  }
 }
 
 export default combineReducers({
