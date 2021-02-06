@@ -17,8 +17,15 @@ function users(state =[]){
   return state;
 }
 
-function currentCity(state=""){
-  return state;
+function currentCity(state = globalState.currentCity,action) {
+  switch(action.type) {
+    case "SET_CURRENT_CITY":
+      return {
+        ...state,
+        currentCity: action.value
+      }
+    default: return state
+  }
 }
 
 function currentTemp(state=0){
@@ -44,7 +51,6 @@ function imageScale(state=1){
 function searchText(state=""){
   return state;
 }
-
 // complete reducer function that should check action prop type ""SET_SPECIAL_TEXT" to determine state value
 export function specialText(state = globalState.specialText, action) {
   switch(action.type) {

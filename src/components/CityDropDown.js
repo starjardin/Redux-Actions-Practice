@@ -1,18 +1,22 @@
-import React from 'react';
-import { InputLabel, Select, MenuItem } from '@material-ui/core';
+import React, { useState } from 'react';
+import { InputLabel,Select,MenuItem } from '@material-ui/core';
+import { connect } from 'react-redux'
+import {setCurrentCity} from '../actions'
 
-function CityDropDown({ set }) {
+function CityDropDown({setCurrentCity }) {
+  const [ city,setCity ] = useState('')
   return (
       <div>
         <InputLabel id="label">Select Current City</InputLabel> 
         <Select
           labelId="label" 
           id="select" 
-          value="Austin"
+          value={city}
           onChange={
           (e)=>{
-            if(set){
-              set(e.target.value);
+            if(setCurrentCity){
+              setCity(e.target.value);
+              setCurrentCity(e.target.value);
             }
           }
           }>
@@ -27,4 +31,7 @@ function CityDropDown({ set }) {
       </div>
   );
 }
-export default CityDropDown;
+
+export default connect(
+  null, {setCurrentCity}
+)(CityDropDown);

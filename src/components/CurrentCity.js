@@ -1,10 +1,17 @@
 import React from 'react';
+import { connect } from "react-redux"
 
-function CurrentCity({ text }) {
+function CurrentCity({ currentCity }) {
+  console.log(currentCity);
   return (
       <div>
-        CurrentCity: {text ? text : "null"}
+        CurrentCity: {currentCity ? currentCity : "null"}
       </div>
   );
 }
-export default CurrentCity;
+
+export default connect(
+  (state) => ({
+    currentCity: state.currentCity.currentCity
+  }), null
+)(CurrentCity);

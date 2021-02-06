@@ -6,6 +6,13 @@ export function setSpecialText(text){
   }
 }
 
+export function setCurrentCity(text){
+  return {
+    type: "SET_CURRENT_CITY",
+    value: text
+  }
+}
+
 export function increase(){
   return {
     type: "INCREASE_COUNTER",
