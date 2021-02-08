@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux'
 
 function Counter({ count }) {
   return (
@@ -9,4 +8,4 @@ function Counter({ count }) {
   );
 }
 
-export default connect((state) => ({ count: state.currentCount }), null)(Counter);
+export default Counter;

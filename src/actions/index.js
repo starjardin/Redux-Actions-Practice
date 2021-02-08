@@ -23,3 +23,10 @@ export function decrease(){
     type: "DECREASE_COUNTER",
   }
 }
+
+export function changeTemperature (temp) {
+  return {
+    type: "CHANGE_TEMPERATURE",
+    value: temp
+  }
+}

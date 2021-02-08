@@ -24,8 +24,12 @@ function currentCity (state = 'Austin', action) {
   }
 }
 
-function currentTemp(state=0){
-  return state;
+function currentTemp(state=23, action){
+  switch (action.type) {
+    case "CHANGE_TEMPERATURE":
+      return action.value
+    default: return state
+  }
 }
 
 function displayModal(state=false){

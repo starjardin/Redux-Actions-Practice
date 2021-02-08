@@ -1,8 +1,5 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import { connect } from "react-redux"
-
-import  {increase, decrease} from '../actions/index'
 
 function CounterButton({ increase, decrease }) {
   return (
@@ -30,8 +27,4 @@ function CounterButton({ increase, decrease }) {
       </div>
   );
 }
-export default connect(
-  null,{
-    increase, decrease
-  }
-)(CounterButton);
+export default CounterButton;
