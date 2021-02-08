@@ -43,8 +43,12 @@ function imageUrl(state=""){
   return state
 }
 
-function currentUserSort(state="first_name"){
-  return state;
+function currentUserSort(state="first_name", action){
+  switch (action.type) {
+    case "SORT_USER_NAME":
+      return action.sortBy
+    default: return state
+  }
 }
 
 function imageScale(state=1){
@@ -55,7 +59,7 @@ function searchText(state=""){
   return state;
 }
 // complete reducer function that should check action prop type ""SET_SPECIAL_TEXT" to determine state value
-export function specialText(state = '', action) {
+function specialText(state = '', action) {
   switch(action.type) {
     case "SET_SPECIAL_TEXT":
       return action.value

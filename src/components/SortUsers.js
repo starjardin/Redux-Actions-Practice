@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { InputLabel, Select, MenuItem } from '@material-ui/core';
 
-function SortUsers({ set }) {
+function SortUsers ({ set }) {
+  const [ sortUser, setSortUsers ] = useState('first_name')
   return (
       <div>
         <InputLabel id="label">Sort Users</InputLabel> 
         <Select
           labelId="label" 
           id="select" 
-          value="first_name" 
+          value={sortUser}
           onChange={
             (e)=>{
-              if(set){
+              if (set) {
+                setSortUsers(e.target.value)
                 set(e.target.value);
               }
             }

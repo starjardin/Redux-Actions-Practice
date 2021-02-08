@@ -1,7 +1,8 @@
 import React from 'react';
 import uuid from 'uuid';
 
-function Users({ users, sortOn, firstNameFilter }) {
+function Users ({ users, sortOn, firstNameFilter }) {
+  console.log(sortOn);
   let usersDivs = null;
   let sorted = [];
 

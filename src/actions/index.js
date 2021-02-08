@@ -36,3 +36,11 @@ export function toggleModal () {
     type: 'TOGGLE_MODAL'
   }
 }
+
+
+export function sortUserName (sortBy) {
+  return {
+    type: "SORT_USER_NAME",
+    sortBy
+  }
+}
