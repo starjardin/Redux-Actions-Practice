@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { InputLabel,Select,MenuItem } from '@material-ui/core';
-import { connect } from 'react-redux'
-import {setCurrentCity} from '../actions'
 
-function CityDropDown({setCurrentCity }) {
+function CityDropDown({set }) {
   const [ city,setCity ] = useState('Austin')
   return (
       <div>
@@ -14,9 +12,9 @@ function CityDropDown({setCurrentCity }) {
           value={city}
           onChange={
           (e)=>{
-            if(setCurrentCity){
+            if(set){
               setCity(e.target.value);
-              setCurrentCity(e.target.value);
+              set(e.target.value);
             }
           }
           }>
@@ -32,6 +30,4 @@ function CityDropDown({setCurrentCity }) {
   );
 }
 
-export default connect(
-  null, {setCurrentCity}
-)(CityDropDown);
+export default CityDropDown;
