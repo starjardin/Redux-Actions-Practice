@@ -1,7 +1,8 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 
-function SearchTextBox({ set }) {
+function SearchTextBox ({ set }) {
+  console.log(set);
   return (
       <div>
         <div>Search Users on First Name:</div>

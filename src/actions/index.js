@@ -44,3 +44,10 @@ export function sortUserName (sortBy) {
     sortBy
   }
 }
+
+export function searchText (text) {
+  return {
+    type: "SEARCH_TEXT_BOX",
+    value: text
+  }
+}

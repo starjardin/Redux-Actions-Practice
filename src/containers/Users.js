@@ -5,7 +5,8 @@ function mapStateToProps (state) {
   return {
     ...state,
     users: state.users,
-    sortOn : state.currentUserSort
+    sortOn: state.currentUserSort,
+    firstNameFilter : state.searchText
 }
 }
 

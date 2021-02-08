@@ -55,8 +55,12 @@ function imageScale(state=1){
   return state
 }
 
-function searchText(state=""){
-  return state;
+function searchText(state="", action){
+  switch (action.type) {
+    case "SEARCH_TEXT_BOX":
+      return action.value
+    default: return state
+  }
 }
 // complete reducer function that should check action prop type ""SET_SPECIAL_TEXT" to determine state value
 function specialText(state = '', action) {
