@@ -18,8 +18,8 @@ import CityDropDown from "./components/CityDropDown";
 import SearchTextBox from "./components/SearchTextBox";
 import SortUsers from "./components/SortUsers";
 import ScaleImage from "./components/ScaleImage";
-import Modal from "./components/Modal";
-import ShowModal from "./components/ShowModal";
+import Modal from "./containers/Modal";
+import ShowModal from "./containers/ShowModal";
 
 function App() {
   return (

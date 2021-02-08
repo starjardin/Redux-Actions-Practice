@@ -32,8 +32,11 @@ function currentTemp(state=23, action){
   }
 }
 
-function displayModal(state=false){
-  return state;
+function displayModal(state=false, action){
+  switch (action.type) {
+    case "TOGGLE_MODAL": return !state
+  default: return state
+  }
 }
 
 function imageUrl(state=""){

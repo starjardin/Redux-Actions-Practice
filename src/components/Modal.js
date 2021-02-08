@@ -13,7 +13,7 @@ const customStyles = {
   }
 };
 
-function ModalTemplate({ displayModal, toggleModal }) {
+function ModalTemplate ({ displayModal, toggleModal }) {
   return (
     <Modal
       isOpen={displayModal}

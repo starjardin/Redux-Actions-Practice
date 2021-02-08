@@ -30,3 +30,9 @@ export function changeTemperature (temp) {
     value: temp
   }
 }
+
+export function toggleModal () {
+  return {
+    type: 'TOGGLE_MODAL'
+  }
+}
