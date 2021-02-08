@@ -9,8 +9,4 @@ function Counter({ count }) {
   );
 }
 
-export default connect(
-  (state) => ({
-    count: state.currentCount
-  }),null
-)(Counter);
+export default connect((state) => ({ count: state.currentCount }), null)(Counter);

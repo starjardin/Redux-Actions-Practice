@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import {setCurrentCity} from '../actions'
 
 function CityDropDown({setCurrentCity }) {
-  const [ city,setCity ] = useState('')
+  const [ city,setCity ] = useState('Austin')
   return (
       <div>
         <InputLabel id="label">Select Current City</InputLabel> 

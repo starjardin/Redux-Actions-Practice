@@ -1,8 +1,7 @@
 import { combineReducers } from "redux";
 
-import globalState from '../state'
 // incomplete reducer function that checks an action prop type to detemine a counter number
-function currentCount(state= globalState.currentCount, action){
+function currentCount(state= 0, action){
   switch(action.type) {
     case "INCREASE_COUNTER":
       return state + 1
@@ -17,13 +16,10 @@ function users(state =[]){
   return state;
 }
 
-function currentCity(state = globalState.currentCity,action) {
+function currentCity (state = 'Austin', action) {
   switch(action.type) {
     case "SET_CURRENT_CITY":
-      return {
-        ...state,
-        currentCity: action.value
-      }
+      return action.value
     default: return state
   }
 }
@@ -52,13 +48,10 @@ function searchText(state=""){
   return state;
 }
 // complete reducer function that should check action prop type ""SET_SPECIAL_TEXT" to determine state value
-export function specialText(state = globalState.specialText, action) {
+export function specialText(state = '', action) {
   switch(action.type) {
     case "SET_SPECIAL_TEXT":
-      return {
-        ...state,
-        specialText: action.value
-      }
+      return action.value
     default: return state
   }
 }

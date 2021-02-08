@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux"
 
-function CurrentCity({ currentCity }) {
+function CurrentCity({currentCity}) {
   console.log(currentCity);
   return (
       <div>
@@ -10,8 +10,5 @@ function CurrentCity({ currentCity }) {
   );
 }
 
-export default connect(
-  (state) => ({
-    currentCity: state.currentCity.currentCity
-  }), null
-)(CurrentCity);
+export default connect(({ currentCity }) => ({ currentCity }), null)(CurrentCity);
+
