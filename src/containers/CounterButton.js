@@ -1,10 +1,11 @@
 import { connect } from 'react-redux'
 import CounterButton from '../components/CounterButton'
-import { increase, decrease } from '../actions/'
+import { increaseCounter, decreaseCounter } from '../actions/'
 
 
 const mapToDispatch = {
-  increase, decrease
+  increase: increaseCounter,
+  decrease: decreaseCounter
 }
 
 export default connect(null, mapToDispatch)(CounterButton)
