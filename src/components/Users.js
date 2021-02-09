@@ -28,7 +28,10 @@ function Users ({ users, sortOn, firstNameFilter }) {
     });
 
     usersDivs = usersDivs.map(function(u){
-      return <div key={uuid()}>{u.first_name} {u.last_name}</div>
+      return <div key={ uuid() }>
+        <span>{ u.first_name } 	&nbsp; </span>
+        <span>{ u.last_name }</span>
+      </div>
     })
   }
   return (

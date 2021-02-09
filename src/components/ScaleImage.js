@@ -13,3 +13,10 @@ function ScaleImage({ set }) {
   );
 }
 export default ScaleImage;
+
+function setText(text) {
+  return {
+    type: "SET",
+    text
+  }
+}

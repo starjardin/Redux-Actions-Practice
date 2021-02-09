@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 
-function UserButtons({ add, remove }) {
+function UserButtons ({ add, remove }) {
   return (
       <div>
         <Button

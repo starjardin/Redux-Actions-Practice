@@ -12,8 +12,12 @@ function currentCount(state= 0, action){
 }
 
 // incomplete reducer function that should check an action prop type to return an array of users
-function users(state =[]){
-  return state;
+function users (state = [], action) {
+  switch (action.type) {
+    case "ADD_USER": return [ ...state, action.user ]
+    case "REMOVE_USER": return state.slice(0, -1)
+    default: return state
+  }
 }
 
 function currentCity (state = 'Austin', action) {
@@ -39,8 +43,11 @@ function displayModal(state=false, action){
   }
 }
 
-function imageUrl(state=""){
-  return state
+function imageUrl (state = "", action) {
+  switch (action.type) {
+    case "SET_IMAGE_URL": return action.url
+    default: return state
+  }
 }
 
 function currentUserSort(state="first_name", action){
@@ -51,8 +58,11 @@ function currentUserSort(state="first_name", action){
   }
 }
 
-function imageScale(state=1){
-  return state
+function imageScale(state=1, action){
+  switch (action.type) {
+    case "IMAGE_SCALE": return action.value
+    default: return state
+  }
 }
 
 function searchText(state="", action){
@@ -70,6 +80,8 @@ function specialText(state = '', action) {
     default: return state
   }
 }
+
+
 
 export default combineReducers({
   currentCount,

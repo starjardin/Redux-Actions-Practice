@@ -14,12 +14,12 @@ import SortUsers from "./containers/SortUsers";
 import SpecialText from "./containers/SpecialText";
 import SpecialTextBox from "./containers/SpecialTextBox";
 import Thermostat from "./containers/Thermostat";
+import UserButtons from "./containers/UserButtons";
+import ImagePreview from "./containers/ImagePreview";
+import ImageUrlTextBox from "./containers/ImageUrlTextBox";
 
 // components
-import UserButtons from "./components/UserButtons";
-import ImagePreview from "./components/ImagePreview";
-import ImageUrlTextBox from "./components/ImageUrlTextBox";
-import ScaleImage from "./components/ScaleImage";
+import ScaleImage from "./containers/ScaleImage";
 
 
 function App() {

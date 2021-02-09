@@ -54,7 +54,7 @@ export function changeTemperature (temp) {
 //action creator to toggle - hide and show - modal
 export function toggleModal () {
   return {
-    type: 'TOGGLE_MODAL'
+    type: "TOGGLE_MODAL"
   }
 }
 
@@ -71,5 +71,20 @@ export function searchText (text) {
   return {
     type: "SEARCH_TEXT_BOX",
     value: text
+  }
+}
+
+
+export function setImageUrl (url) {
+  return {
+    type: "SET_IMAGE_URL",
+    url,
+  }
+}
+
+export function imageScale (value) {
+  return {
+    type: "IMAGE_SCALE",
+    value
   }
 }

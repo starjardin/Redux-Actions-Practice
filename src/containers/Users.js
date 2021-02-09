@@ -7,7 +7,7 @@ function mapStateToProps (state) {
     users: state.users,
     sortOn: state.currentUserSort,
     firstNameFilter : state.searchText
-}
+  }
 }
 
 export default connect(mapStateToProps, null)(Users)

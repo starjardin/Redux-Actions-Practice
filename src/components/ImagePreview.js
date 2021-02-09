@@ -1,12 +1,14 @@
 import React from 'react';
 
-function ImagePreview({ scale, imageUrl}) {
+function ImagePreview ({ scale, imageUrl }) {
+  console.log(scale);
   let width = 200;
   let height = 200;
   if(scale){
     width = 200 * scale;
     height = 200 * scale;
   }
+  
   return (
     <div>
       <div>Image Preview</div>
@@ -16,7 +18,9 @@ function ImagePreview({ scale, imageUrl}) {
           alt="image preview"
           src={imageUrl}
           width={width}
-          height={height}/>}
+          height={height}
+        />
+      }
     </div>
   );
 }
