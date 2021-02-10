@@ -88,3 +88,14 @@ export function imageScale (value) {
     value
   }
 }
+
+export function getUsers () {
+  return async (dispatch) => {
+    const res = await fetch("https://jsonplaceholder.typicode.com/users")
+    const users = await res.json()
+    dispatch({
+      type: "GET_USER",
+      value: users
+    })
+  }
+}

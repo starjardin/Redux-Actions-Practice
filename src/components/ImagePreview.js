@@ -1,7 +1,6 @@
 import React from 'react';
 
 function ImagePreview ({ scale, imageUrl }) {
-  console.log(scale);
   let width = 200;
   let height = 200;
   if(scale){
